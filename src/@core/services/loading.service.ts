@@ -6,28 +6,27 @@ import { SpinnerComponent } from '../../@components/spinner/spinner.component';
 export declare type ProgressRef = OverlayRef | null;
 
 @Injectable({
-    providedIn: 'root'
+	providedIn: 'root',
 })
 export class LoadingService {
+	constructor(private dynamicOverlay: Overlay) {}
 
-    constructor(private dynamicOverlay: Overlay) { }
+	public showProgress() {
+		const result = this.dynamicOverlay.create({
+			positionStrategy: this.dynamicOverlay
+				.position()
+				.global()
+				.centerHorizontally()
+				.centerVertically(),
+			hasBackdrop: true,
+		});
+		result.attach(new ComponentPortal(SpinnerComponent));
+		return result;
+	}
 
-    public showProgress() {
-        const result = this.dynamicOverlay.create({
-            positionStrategy: this.dynamicOverlay.position().global().centerHorizontally().centerVertically(),
-            hasBackdrop: true
-        });
-        result.attach(new ComponentPortal(SpinnerComponent));
-        return result;
-    }
-
-    detach(result: ProgressRef) {
-        if (result) {
-            result.detach();
-        }
-    }
-
+	detach(result: ProgressRef) {
+		if (result) {
+			result.detach();
+		}
+	}
 }
-
-
-

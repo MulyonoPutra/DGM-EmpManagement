@@ -12,25 +12,25 @@ import { RupiahCurrencyPipe } from '../../@core/pipe/currency.pipe';
 import { ShortenerPipe } from '../../@core/pipe/shortener.pipe';
 
 @NgModule({
-    declarations: [
-        EmployeeDetailsComponent,
-        EmployeeCreateComponent,
-        EmployeeListComponent,
-        RupiahCurrencyPipe,
-        ShortenerPipe
-    ],
-    imports: [
-        CommonModule,
-        EmployeeRoutingModule,
-        ComponentsModule,
-        MaterialModule,
-        FormsModule,
-        ReactiveFormsModule,
-    ],
-    exports: [
-        EmployeeDetailsComponent,
-        EmployeeCreateComponent,
-        EmployeeListComponent,
-    ],
+	declarations: [
+		EmployeeDetailsComponent,
+		EmployeeCreateComponent,
+		EmployeeListComponent,
+		RupiahCurrencyPipe,
+		ShortenerPipe,
+	],
+	imports: [
+		CommonModule,
+		EmployeeRoutingModule,
+		ComponentsModule,
+		MaterialModule,
+		FormsModule,
+		ReactiveFormsModule,
+	],
+	exports: [
+		EmployeeDetailsComponent,
+		EmployeeCreateComponent,
+		EmployeeListComponent,
+	],
 })
 export class EmployeeModule {}

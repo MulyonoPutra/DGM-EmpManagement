@@ -1,11 +1,11 @@
 export interface Login {
-  email: string;
-  password: string;
+	email: string;
+	password: string;
 }
 
 export interface ILogin {
-  _id: string;
-  name: string;
-  email: string;
-  token: string;
+	_id: string;
+	name: string;
+	email: string;
+	token: string;
 }

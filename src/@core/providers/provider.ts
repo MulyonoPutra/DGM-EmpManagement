@@ -5,7 +5,7 @@ import { AuthInterceptor } from '../interceptor/auth.interceptor';
 import { LoadingInterceptor } from '../interceptor/loading.interceptor';
 
 export const Providers: Provider[] = [
-    CookieService,
-    { provide: HTTP_INTERCEPTORS, useClass: LoadingInterceptor, multi: true },
-    { provide: HTTP_INTERCEPTORS, useClass: AuthInterceptor, multi: true },
+	CookieService,
+	{ provide: HTTP_INTERCEPTORS, useClass: LoadingInterceptor, multi: true },
+	{ provide: HTTP_INTERCEPTORS, useClass: AuthInterceptor, multi: true },
 ];

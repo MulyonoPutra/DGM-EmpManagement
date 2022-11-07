@@ -1,118 +1,212 @@
 <div class="container">
-  <mat-card>
-    <mat-card-title>
-      Create
-    </mat-card-title>
-    <mat-card-content>
-      <form [formGroup]="employeeForms" autocomplete="off">
-        <div class="grid grid-rows lg:grid-rows-3 md:grid-rows-1 lg:grid-flow-col gap-4">
-          <!-- Username -->
-          <div>
-            <mat-form-field appearance="outline">
-              <mat-label>Username</mat-label>
-              <input matInput placeholder="Username" formControlName="username">
-            </mat-form-field>
-            <mat-error *ngIf="usernameTouchDirty && checkError('username', 'required')"> {{errorMessages('Username', 'required')}}
-            </mat-error>
-          </div>
+	<mat-card>
+		<mat-card-title> Create </mat-card-title>
+		<mat-card-content>
+			<form [formGroup]="employeeForms" autocomplete="off">
+				<div
+					class="grid grid-rows lg:grid-rows-3 md:grid-rows-1 lg:grid-flow-col gap-4">
+					<!-- Username -->
+					<div>
+						<mat-form-field appearance="outline">
+							<mat-label>Username</mat-label>
+							<input
+								matInput
+								placeholder="Username"
+								formControlName="username" />
+						</mat-form-field>
+						<mat-error
+							*ngIf="
+								usernameTouchDirty &&
+								checkError('username', 'required')
+							">
+							{{ errorMessages('Username', 'required') }}
+						</mat-error>
+					</div>
 
-          <!-- First Name -->
-          <div>
-            <mat-form-field appearance="outline">
-              <mat-label>First Name</mat-label>
-              <input matInput placeholder="First Name" formControlName="firstName">
-            </mat-form-field>
-            <mat-error *ngIf="firstNameTouchDirty && checkError('firstName', 'required')"> {{errorMessages('First Name',
-              'required')}} </mat-error>
-          </div>
+					<!-- First Name -->
+					<div>
+						<mat-form-field appearance="outline">
+							<mat-label>First Name</mat-label>
+							<input
+								matInput
+								placeholder="First Name"
+								formControlName="firstName" />
+						</mat-form-field>
+						<mat-error
+							*ngIf="
+								firstNameTouchDirty &&
+								checkError('firstName', 'required')
+							">
+							{{ errorMessages('First Name', 'required') }}
+						</mat-error>
+					</div>
 
-          <!-- Last Name -->
-          <div>
-            <mat-form-field appearance="outline">
-              <mat-label>Last Name</mat-label>
-              <input matInput placeholder="Last Name" formControlName="lastName">
-            </mat-form-field>
-            <mat-error *ngIf="lastNameTouchDirty && checkError('lastName', 'required')"> {{errorMessages('Last Name',
-              'required')}} </mat-error>
-          </div>
+					<!-- Last Name -->
+					<div>
+						<mat-form-field appearance="outline">
+							<mat-label>Last Name</mat-label>
+							<input
+								matInput
+								placeholder="Last Name"
+								formControlName="lastName" />
+						</mat-form-field>
+						<mat-error
+							*ngIf="
+								lastNameTouchDirty &&
+								checkError('lastName', 'required')
+							">
+							{{ errorMessages('Last Name', 'required') }}
+						</mat-error>
+					</div>
 
-          <!-- Email -->
-          <div>
-            <mat-form-field appearance="outline">
-              <mat-label>Email</mat-label>
-              <input matInput placeholder="Email" formControlName="email">
-            </mat-form-field>
-            <mat-error *ngIf="emailTouchDirty && checkError('email', 'email')">{{errorMessages('Email', 'email')}} </mat-error>
-            <mat-error *ngIf="emailTouchDirty && checkError('email', 'required')">{{errorMessages('Email', 'required')}}
-            </mat-error>
-          </div>
+					<!-- Email -->
+					<div>
+						<mat-form-field appearance="outline">
+							<mat-label>Email</mat-label>
+							<input
+								matInput
+								placeholder="Email"
+								formControlName="email" />
+						</mat-form-field>
+						<mat-error
+							*ngIf="
+								emailTouchDirty && checkError('email', 'email')
+							"
+							>{{ errorMessages('Email', 'email') }}
+						</mat-error>
+						<mat-error
+							*ngIf="
+								emailTouchDirty &&
+								checkError('email', 'required')
+							"
+							>{{ errorMessages('Email', 'required') }}
+						</mat-error>
+					</div>
 
-          <!-- Birth Date -->
-          <div>
-            <mat-form-field appearance="outline">
-              <mat-label>Birth Date</mat-label>
-              <input [readonly]="inputReadonly" matInput [max]="today" [matDatepicker]="picker2" autocomplete="off" formControlName="birthDate">
-              <mat-datepicker-toggle matSuffix [for]="picker2"></mat-datepicker-toggle>
-              <mat-datepicker #picker2 color="primary"></mat-datepicker>
-            </mat-form-field>
-            <mat-error *ngIf="birthDateTouchDirty && checkError('birthDate', 'required')"> {{errorMessages('Birth Date',
-              'required')}} </mat-error>
-          </div>
+					<!-- Birth Date -->
+					<div>
+						<mat-form-field appearance="outline">
+							<mat-label>Birth Date</mat-label>
+							<input
+								[readonly]="inputReadonly"
+								matInput
+								[max]="today"
+								[matDatepicker]="picker2"
+								autocomplete="off"
+								formControlName="birthDate" />
+							<mat-datepicker-toggle
+								matSuffix
+								[for]="picker2"></mat-datepicker-toggle>
+							<mat-datepicker
+								#picker2
+								color="primary"></mat-datepicker>
+						</mat-form-field>
+						<mat-error
+							*ngIf="
+								birthDateTouchDirty &&
+								checkError('birthDate', 'required')
+							">
+							{{ errorMessages('Birth Date', 'required') }}
+						</mat-error>
+					</div>
 
-          <!-- Salary -->
-          <div>
-            <mat-form-field appearance="outline">
-              <mat-label>Salary</mat-label>
-              <input type="number" matInput placeholder="Salary" formControlName="salary">
-            </mat-form-field>
-            <mat-error *ngIf="salaryTouchDirty && checkError('salary', 'required')"> {{errorMessages('Salary', 'required')}}
-            </mat-error>
-          </div>
+					<!-- Salary -->
+					<div>
+						<mat-form-field appearance="outline">
+							<mat-label>Salary</mat-label>
+							<input
+								type="number"
+								matInput
+								placeholder="Salary"
+								formControlName="salary" />
+						</mat-form-field>
+						<mat-error
+							*ngIf="
+								salaryTouchDirty &&
+								checkError('salary', 'required')
+							">
+							{{ errorMessages('Salary', 'required') }}
+						</mat-error>
+					</div>
 
-          <!-- Status -->
-          <div>
-            <mat-form-field appearance="outline">
-              <mat-label>Status</mat-label>
-              <input matInput placeholder="Status" formControlName="status">
-            </mat-form-field>
-            <mat-error *ngIf="statusTouchDirty && checkError('status', 'required')"> {{errorMessages('Status', 'required')}}
-            </mat-error>
-          </div>
+					<!-- Status -->
+					<div>
+						<mat-form-field appearance="outline">
+							<mat-label>Status</mat-label>
+							<input
+								matInput
+								placeholder="Status"
+								formControlName="status" />
+						</mat-form-field>
+						<mat-error
+							*ngIf="
+								statusTouchDirty &&
+								checkError('status', 'required')
+							">
+							{{ errorMessages('Status', 'required') }}
+						</mat-error>
+					</div>
 
-          <!-- Group -->
-          <div>
-            <mat-form-field appearance="outline">
-              <mat-label>Group</mat-label>
-              <mat-select formControlName="group" name="food">
-                <mat-option>None</mat-option>
-                <mat-option *ngFor="let groups of groupCollections" [value]="groups.value">
-                  {{groups.viewValue}}
-                </mat-option>
-              </mat-select>
-            </mat-form-field>
-            <mat-error *ngIf="groupTouchDirty && checkError('group', 'required')"> {{errorMessages('Group', 'required')}}
-            </mat-error>
-          </div>
+					<!-- Group -->
+					<div>
+						<mat-form-field appearance="outline">
+							<mat-label>Group</mat-label>
+							<mat-select formControlName="group" name="food">
+								<mat-option>None</mat-option>
+								<mat-option
+									*ngFor="let groups of groupCollections"
+									[value]="groups.value">
+									{{ groups.viewValue }}
+								</mat-option>
+							</mat-select>
+						</mat-form-field>
+						<mat-error
+							*ngIf="
+								groupTouchDirty &&
+								checkError('group', 'required')
+							">
+							{{ errorMessages('Group', 'required') }}
+						</mat-error>
+					</div>
 
-          <!-- Description -->
-          <div>
-            <mat-form-field appearance="outline">
-              <mat-label>Description</mat-label>
-              <input [readonly]="inputReadonly"  matInput [max]="today" [matDatepicker]="picker1" autocomplete="off" formControlName="description">
-              <mat-datepicker-toggle matSuffix [for]="picker1"></mat-datepicker-toggle>
-              <mat-datepicker #picker1 color="primary"></mat-datepicker>
-            </mat-form-field>
-            <mat-error *ngIf="descriptionTouchDirty && checkError('description', 'required')"> {{errorMessages('Description',
-              'required')}} </mat-error>
-          </div>
-        </div>
-        <button class="button-save" type="button" [disabled]="!employeeForms.valid" (click)="onSubmit()">
-          Save
-        </button>
-        <button class="button-cancel" type="button" (click)="onBack()">
-          Cancel
-        </button>
-      </form>
-    </mat-card-content>
-  </mat-card>
+					<!-- Description -->
+					<div>
+						<mat-form-field appearance="outline">
+							<mat-label>Description</mat-label>
+							<input
+								[readonly]="inputReadonly"
+								matInput
+								[max]="today"
+								[matDatepicker]="picker1"
+								autocomplete="off"
+								formControlName="description" />
+							<mat-datepicker-toggle
+								matSuffix
+								[for]="picker1"></mat-datepicker-toggle>
+							<mat-datepicker
+								#picker1
+								color="primary"></mat-datepicker>
+						</mat-form-field>
+						<mat-error
+							*ngIf="
+								descriptionTouchDirty &&
+								checkError('description', 'required')
+							">
+							{{ errorMessages('Description', 'required') }}
+						</mat-error>
+					</div>
+				</div>
+				<button
+					class="button-save"
+					type="button"
+					[disabled]="!employeeForms.valid"
+					(click)="onSubmit()">
+					Save
+				</button>
+				<button class="button-cancel" type="button" (click)="onBack()">
+					Cancel
+				</button>
+			</form>
+		</mat-card-content>
+	</mat-card>
 </div>

@@ -1,52 +1,56 @@
 <div class="container">
-  <mat-card>
-    <div class="bg-white p-3 shadow-sm rounded-sm">
-      <div class="text-gray-700">
-        <div class="grid md:grid-cols-2 text-sm">
-          <div class="grid grid-cols-2">
-            <div class="title">Username</div>
-            <span class="px-4 py-2">{{ employee.username }} </span>
-          </div>
-          <div class="grid grid-cols-2">
-            <div class="title">Salary</div>
-            <div class="px-4 py-2">{{ employee.salary | rupiahCurrency }}</div>
-          </div>
-          <div class="grid grid-cols-2">
-            <div class="title">First Name</div>
-            <div class="px-4 py-2">{{ employee.firstName }}</div>
-          </div>
-          <div class="grid grid-cols-2">
-            <div class="title">Group</div>
-            <div class="px-4 py-2">{{ employee.group }}</div>
-          </div>
-          <div class="grid grid-cols-2">
-            <div class="title">Last Name</div>
-            <span class="px-4 py-2">{{ employee.lastName }} </span>
-          </div>
-          <div class="grid grid-cols-2">
-            <div class="title">Email</div>
-            <div class="px-4 py-2 overflow-auto">{{employee.email | shortener: 25}}</div>
-          </div>
-          <div class="grid grid-cols-2">
-            <div class="title">Birth Date</div>
-            <div class="px-4 py-2">{{ employee.birthDate | date:'longDate' }}</div>
-          </div>
+	<mat-card>
+		<div class="bg-white p-3 shadow-sm rounded-sm">
+			<div class="text-gray-700">
+				<div class="grid md:grid-cols-2 text-sm">
+					<div class="grid grid-cols-2">
+						<div class="title">Username</div>
+						<span class="px-4 py-2">{{ employee.username }} </span>
+					</div>
+					<div class="grid grid-cols-2">
+						<div class="title">Salary</div>
+						<div class="px-4 py-2">
+							{{ employee.salary | rupiahCurrency }}
+						</div>
+					</div>
+					<div class="grid grid-cols-2">
+						<div class="title">First Name</div>
+						<div class="px-4 py-2">{{ employee.firstName }}</div>
+					</div>
+					<div class="grid grid-cols-2">
+						<div class="title">Group</div>
+						<div class="px-4 py-2">{{ employee.group }}</div>
+					</div>
+					<div class="grid grid-cols-2">
+						<div class="title">Last Name</div>
+						<span class="px-4 py-2">{{ employee.lastName }} </span>
+					</div>
+					<div class="grid grid-cols-2">
+						<div class="title">Email</div>
+						<div class="px-4 py-2 overflow-auto">
+							{{ employee.email | shortener: 25 }}
+						</div>
+					</div>
+					<div class="grid grid-cols-2">
+						<div class="title">Birth Date</div>
+						<div class="px-4 py-2">
+							{{ employee.birthDate | date: 'longDate' }}
+						</div>
+					</div>
 
-          <div class="grid grid-cols-2">
-            <div class="title">Status</div>
-            <div class="px-4 py-2">{{ employee.status }}</div>
-          </div>
-          <div class="grid grid-cols-2">
-            <div class="title">Description</div>
-            <div class="px-4 py-2">{{ employee.description | date:'longDate' }}</div>
-          </div>
-        </div>
-      </div>
-    </div>
-    <button class="button-back" type="button" (click)="onBack()">
-      OK
-    </button>
-  </mat-card>
+					<div class="grid grid-cols-2">
+						<div class="title">Status</div>
+						<div class="px-4 py-2">{{ employee.status }}</div>
+					</div>
+					<div class="grid grid-cols-2">
+						<div class="title">Description</div>
+						<div class="px-4 py-2">
+							{{ employee.description | date: 'longDate' }}
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
+		<button class="button-back" type="button" (click)="onBack()">OK</button>
+	</mat-card>
 </div>
-
-

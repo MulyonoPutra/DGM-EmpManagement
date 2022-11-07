@@ -5,254 +5,253 @@ $disable: #eaeaea;
 $font-disable: #b5b5b5;
 
 .login {
-  &-left {
-    width: 44%;
+	&-left {
+		width: 44%;
 
-    @media (max-width: 767px) {
-      @apply relative;
-      width: 100%;
-    }
-  }
+		@media (max-width: 767px) {
+			@apply relative;
+			width: 100%;
+		}
+	}
 
-  &-right {
-    width: 56%;
-    position: fixed;
+	&-right {
+		width: 56%;
+		position: fixed;
 
-    @media (max-width: 767px) {
-      width: 100%;
-      height: 100%;
-      position: fixed;
-    }
+		@media (max-width: 767px) {
+			width: 100%;
+			height: 100%;
+			position: fixed;
+		}
 
-    &-container {
-      padding: 140px;
-      height: 100%;
+		&-container {
+			padding: 140px;
+			height: 100%;
 
-      @media (max-width: 767px) {
-        padding: 0px 20px 48px;
-      }
-    }
+			@media (max-width: 767px) {
+				padding: 0px 20px 48px;
+			}
+		}
 
-    &-heading {
-      font-style: normal;
-      font-weight: 600;
-      font-size: 28px;
-      line-height: 40px;
-      text-align: center;
-      color: white;
+		&-heading {
+			font-style: normal;
+			font-weight: 600;
+			font-size: 28px;
+			line-height: 40px;
+			text-align: center;
+			color: white;
 
-      @media (max-width: 767px) {
-        font-size: 20px;
-      }
-    }
-  }
+			@media (max-width: 767px) {
+				font-size: 20px;
+			}
+		}
+	}
 
-  &-error {
-    font-style: normal;
-    font-weight: 500;
-    font-size: 12px;
-    line-height: 16px;
-    color: #7c7c7c;
-    width: 100%;
+	&-error {
+		font-style: normal;
+		font-weight: 500;
+		font-size: 12px;
+		line-height: 16px;
+		color: #7c7c7c;
+		width: 100%;
 
-    svg {
-      margin-right: 5.33px;
-      padding-top: 1px;
-      margin-top: 1px;
-    }
+		svg {
+			margin-right: 5.33px;
+			padding-top: 1px;
+			margin-top: 1px;
+		}
 
-    &-icon {
-      margin-bottom: 12px;
+		&-icon {
+			margin-bottom: 12px;
 
-      @media (max-width: 767px) {
-        margin-bottom: 35px;
-      }
-    }
-  }
+			@media (max-width: 767px) {
+				margin-bottom: 35px;
+			}
+		}
+	}
 
-  &-btn {
-    border-radius: 5px;
-    width: 100%;
-    font-style: normal;
-    font-weight: 600;
-    font-size: 18px;
-    line-height: 26px;
-    color: #ffffff;
-    background: #145DA0;
-    height: 50px;
-    transition: all 0.3s ease-in;
+	&-btn {
+		border-radius: 5px;
+		width: 100%;
+		font-style: normal;
+		font-weight: 600;
+		font-size: 18px;
+		line-height: 26px;
+		color: #ffffff;
+		background: #145da0;
+		height: 50px;
+		transition: all 0.3s ease-in;
 
-    &:hover {
-      background: #41729F;
-    }
+		&:hover {
+			background: #41729f;
+		}
 
-    &:disabled {
-      background: $disable;
-      cursor: not-allowed;
-      color: $font-disable;
-    }
+		&:disabled {
+			background: $disable;
+			cursor: not-allowed;
+			color: $font-disable;
+		}
 
-    &-sosmed {
-      @apply bg-slate-700;
-      padding: 12px 30px;
-      border: 1px solid #d8d8d8;
-      box-sizing: border-box;
-      border-radius: 4px;
-      min-height: 42px;
-      font-style: normal;
-      font-weight: 500;
-      font-size: 14px;
-      line-height: 18px;
-      color: #7c7c7c;
-      display: inline-block;
-      width: 100%;
-      cursor: pointer;
-      transition: all 0.3s ease-in;
+		&-sosmed {
+			@apply bg-slate-700;
+			padding: 12px 30px;
+			border: 1px solid #d8d8d8;
+			box-sizing: border-box;
+			border-radius: 4px;
+			min-height: 42px;
+			font-style: normal;
+			font-weight: 500;
+			font-size: 14px;
+			line-height: 18px;
+			color: #7c7c7c;
+			display: inline-block;
+			width: 100%;
+			cursor: pointer;
+			transition: all 0.3s ease-in;
 
-      @media (max-width: 767px) {
-        font-size: 14px;
-        line-height: 18px;
-        min-height: 42px;
-      }
+			@media (max-width: 767px) {
+				font-size: 14px;
+				line-height: 18px;
+				min-height: 42px;
+			}
 
-      &-icon {
-        display: inline-block;
-        margin-bottom: -4px;
-        margin-right: 16px;
-      }
+			&-icon {
+				display: inline-block;
+				margin-bottom: -4px;
+				margin-right: 16px;
+			}
 
-      &:hover {
-        background-color: $light-blue;
-      }
-    }
-  }
+			&:hover {
+				background-color: $light-blue;
+			}
+		}
+	}
 
-  &-container {
-    ::ng-deep {
-      .mat-focused {
-        .mat-form-field-label {
-          color: #3f51b5 !important;
-        }
-      }
+	&-container {
+		::ng-deep {
+			.mat-focused {
+				.mat-form-field-label {
+					color: #3f51b5 !important;
+				}
+			}
 
-      .mat-form-field-label {
-        color: #b5b5b5 !important;
-        line-height: 22px;
-      }
+			.mat-form-field-label {
+				color: #b5b5b5 !important;
+				line-height: 22px;
+			}
 
-      .mat-form-field-should-float {
-        &:not(.mat-focused) {
-          .mat-form-field-label {
-            color: #4c4c4c !important;
-          }
-        }
-      }
+			.mat-form-field-should-float {
+				&:not(.mat-focused) {
+					.mat-form-field-label {
+						color: #4c4c4c !important;
+					}
+				}
+			}
 
-      .mat-icon {
-        color: #9ba0a5;
-        cursor: pointer;
-      }
+			.mat-icon {
+				color: #9ba0a5;
+				cursor: pointer;
+			}
 
-      .mat-form-field-hide-placeholder .mat-form-field-label {
-        font-style: normal;
-        font-weight: normal;
-        font-size: 16px;
-        line-height: 24px;
-        color: #ffffff;
-        margin-top: -8px;
-      }
+			.mat-form-field-hide-placeholder .mat-form-field-label {
+				font-style: normal;
+				font-weight: normal;
+				font-size: 16px;
+				line-height: 24px;
+				color: #ffffff;
+				margin-top: -8px;
+			}
 
-      .mat-form-field-hint {
-        &-wrapper {
-          font-style: normal;
-          font-weight: 500;
-          font-size: 12px;
-          line-height: 16px;
-          color: #7c7c7c;
-        }
+			.mat-form-field-hint {
+				&-wrapper {
+					font-style: normal;
+					font-weight: 500;
+					font-size: 12px;
+					line-height: 16px;
+					color: #7c7c7c;
+				}
 
-        &-spacer {
-          display: none;
-        }
-      }
+				&-spacer {
+					display: none;
+				}
+			}
 
-      .mat-form-field-subscript-wrapper {
-        position: relative;
-        padding-left: 0px;
-      }
+			.mat-form-field-subscript-wrapper {
+				position: relative;
+				padding-left: 0px;
+			}
 
-      .mat-form-field {
-        &-flex {
-          height: 53.5px;
-        }
+			.mat-form-field {
+				&-flex {
+					height: 53.5px;
+				}
 
-        &-infix {
-          margin-top: -3px;
-        }
-      }
+				&-infix {
+					margin-top: -3px;
+				}
+			}
 
-      .mat-form-field-appearance-outline .mat-form-field-outline {
-        color: white;
-      }
+			.mat-form-field-appearance-outline .mat-form-field-outline {
+				color: white;
+			}
 
-      .mat-form-field {
+			.mat-form-field {
+				.mat-hint,
+				input,
+				::placeholder,
+				.mat-form-field-label {
+					color: white;
+				}
+			}
+		}
 
-        .mat-hint,
-        input,
-        ::placeholder,
-        .mat-form-field-label {
-          color: white;
-        }
-      }
-    }
+		.line-divider {
+			height: 1px;
+			width: 100%;
+			background-color: #d8d8d8;
+			-webkit-flex: 1;
+			-moz-box-flex: 1;
+			-ms-flex: 1;
+			flex: 1;
+		}
 
-    .line-divider {
-      height: 1px;
-      width: 100%;
-      background-color: #d8d8d8;
-      -webkit-flex: 1;
-      -moz-box-flex: 1;
-      -ms-flex: 1;
-      flex: 1;
-    }
+		.text-divider {
+			padding: 0 0.75rem;
+			font-style: normal;
+			font-weight: 500;
+			font-size: 14px;
+			line-height: 18px;
+			color: #7c7c7c;
+		}
+	}
 
-    .text-divider {
-      padding: 0 0.75rem;
-      font-style: normal;
-      font-weight: 500;
-      font-size: 14px;
-      line-height: 18px;
-      color: #7c7c7c;
-    }
-  }
+	&-link {
+		padding-top: 1px;
 
-  &-link {
-    padding-top: 1px;
-
-    a {
-      font-style: normal;
-      font-weight: 500;
-      font-size: 14px;
-      line-height: 18px;
-      text-decoration-line: underline;
-      color: #7c7c7c;
-      cursor: pointer;
-    }
-  }
+		a {
+			font-style: normal;
+			font-weight: 500;
+			font-size: 14px;
+			line-height: 18px;
+			text-decoration-line: underline;
+			color: #7c7c7c;
+			cursor: pointer;
+		}
+	}
 }
 
 input {
-  font-style: normal;
-  font-weight: normal;
-  font-size: 16px;
-  color: #4c4c4c;
+	font-style: normal;
+	font-weight: normal;
+	font-size: 16px;
+	color: #4c4c4c;
 }
 
 input:-webkit-autofill,
 input:-webkit-autofill:hover,
 input:-webkit-autofill:focus,
 input:-webkit-autofill:active {
-  transition: background-color 5000s ease-in-out 3s;
-  -webkit-text-fill-color: #fff !important;
-  -webkit-text-size-adjust: none;
+	transition: background-color 5000s ease-in-out 3s;
+	-webkit-text-fill-color: #fff !important;
+	-webkit-text-size-adjust: none;
 }

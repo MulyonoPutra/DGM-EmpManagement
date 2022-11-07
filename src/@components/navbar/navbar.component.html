@@ -1,18 +1,17 @@
 <div class="toolbar" role="banner">
-  <span class="m-4 cursor-pointer"(click)="goHome()">Employee Management</span>
-  <div class="spacer"></div>
-  <div class="m-4">
-    <span>{{username}}</span>
-  </div>
-  <div class="m-4 cursor-pointer" *ngIf="!isLoggedIn; else logout">
-    <span>Login</span>
-  </div>
-  <div class="m-4 pointer-cursor">
-    <ng-template #logout class="pointer-cursor" >
-      <button (click)="signout()">
-        Logout
-      </button>
-    </ng-template>
-  </div>
-
+	<span class="m-4 cursor-pointer" (click)="goHome()"
+		>Employee Management</span
+	>
+	<div class="spacer"></div>
+	<div class="m-4">
+		<span>{{ username }}</span>
+	</div>
+	<div class="m-4 cursor-pointer" *ngIf="!isLoggedIn; else logout">
+		<span>Login</span>
+	</div>
+	<div class="m-4 pointer-cursor">
+		<ng-template #logout class="pointer-cursor">
+			<button (click)="signout()">Logout</button>
+		</ng-template>
+	</div>
 </div>

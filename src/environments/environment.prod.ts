@@ -1,4 +1,4 @@
 export const environment = {
-    production: true,
-    endpoint: 'https://employee0.herokuapp.com'
+	production: true,
+	endpoint: 'https://employee0.herokuapp.com',
 };

@@ -1,158 +1,199 @@
 <div class="hidden sm:block md:block mt-[50px]">
-  <mat-card class="m-10 top-4">
-    <div class="example-header">
-      <mat-form-field style="width: 400px;" appearance="outline">
-        <input matInput (keyup)="applyFilter($event)" placeholder="Search">
-        <mat-icon matSuffix>search</mat-icon>
-      </mat-form-field>
-    </div>
-    <div class="example-container mat-elevation-z8">
-      <mat-table [dataSource]="dataSource" matSort>
-        <ng-container matColumnDef="_id">
-          <mat-header-cell *matHeaderCellDef mat-sort-header> ID </mat-header-cell>
-          <mat-cell *matCellDef="let row"> {{row._id | shortener: 10 }} </mat-cell>
-        </ng-container>
+	<mat-card class="m-10 top-4">
+		<div class="example-header">
+			<mat-form-field style="width: 400px" appearance="outline">
+				<input
+					matInput
+					(keyup)="applyFilter($event)"
+					placeholder="Search" />
+				<mat-icon matSuffix>search</mat-icon>
+			</mat-form-field>
+		</div>
+		<div class="example-container mat-elevation-z8">
+			<mat-table [dataSource]="dataSource" matSort>
+				<ng-container matColumnDef="_id">
+					<mat-header-cell *matHeaderCellDef mat-sort-header>
+						ID
+					</mat-header-cell>
+					<mat-cell *matCellDef="let row">
+						{{ row._id | shortener: 10 }}
+					</mat-cell>
+				</ng-container>
 
-        <ng-container matColumnDef="username">
-          <mat-header-cell *matHeaderCellDef mat-sort-header> Username </mat-header-cell>
-          <mat-cell *matCellDef="let row"> {{row.username | shortener: 10}} </mat-cell>
-        </ng-container>
+				<ng-container matColumnDef="username">
+					<mat-header-cell *matHeaderCellDef mat-sort-header>
+						Username
+					</mat-header-cell>
+					<mat-cell *matCellDef="let row">
+						{{ row.username | shortener: 10 }}
+					</mat-cell>
+				</ng-container>
 
-        <ng-container matColumnDef="email">
-          <mat-header-cell *matHeaderCellDef mat-sort-header> email </mat-header-cell>
-          <mat-cell *matCellDef="let row" [style.color]="row.email"> {{row.email | shortener: 18}} </mat-cell>
-        </ng-container>
+				<ng-container matColumnDef="email">
+					<mat-header-cell *matHeaderCellDef mat-sort-header>
+						email
+					</mat-header-cell>
+					<mat-cell *matCellDef="let row" [style.color]="row.email">
+						{{ row.email | shortener: 18 }}
+					</mat-cell>
+				</ng-container>
 
-        <ng-container matColumnDef="birthDate">
-          <mat-header-cell *matHeaderCellDef mat-sort-header> Birth Date </mat-header-cell>
-          <mat-cell *matCellDef="let row" [style.color]="row.birthDate"> {{row.birthDate | date:'longDate'}} </mat-cell>
-        </ng-container>
+				<ng-container matColumnDef="birthDate">
+					<mat-header-cell *matHeaderCellDef mat-sort-header>
+						Birth Date
+					</mat-header-cell>
+					<mat-cell
+						*matCellDef="let row"
+						[style.color]="row.birthDate">
+						{{ row.birthDate | date: 'longDate' }}
+					</mat-cell>
+				</ng-container>
 
-        <ng-container matColumnDef="salary">
-          <mat-header-cell *matHeaderCellDef mat-sort-header> Basic Salary </mat-header-cell>
-          <mat-cell *matCellDef="let row" [style.color]="row.salary"> {{row.salary | rupiahCurrency }} </mat-cell>
-        </ng-container>
+				<ng-container matColumnDef="salary">
+					<mat-header-cell *matHeaderCellDef mat-sort-header>
+						Basic Salary
+					</mat-header-cell>
+					<mat-cell *matCellDef="let row" [style.color]="row.salary">
+						{{ row.salary | rupiahCurrency }}
+					</mat-cell>
+				</ng-container>
 
-        <ng-container matColumnDef="status">
-          <mat-header-cell *matHeaderCellDef mat-sort-header> Status </mat-header-cell>
-          <mat-cell *matCellDef="let row" [style.color]="row.status"> {{row.status | shortener: 10}} </mat-cell>
-        </ng-container>
+				<ng-container matColumnDef="status">
+					<mat-header-cell *matHeaderCellDef mat-sort-header>
+						Status
+					</mat-header-cell>
+					<mat-cell *matCellDef="let row" [style.color]="row.status">
+						{{ row.status | shortener: 10 }}
+					</mat-cell>
+				</ng-container>
 
-        <ng-container matColumnDef="group">
-          <mat-header-cell *matHeaderCellDef mat-sort-header> Group </mat-header-cell>
-          <mat-cell *matCellDef="let row" [style.color]="row.group"> {{row.group | shortener: 10}} </mat-cell>
-        </ng-container>
+				<ng-container matColumnDef="group">
+					<mat-header-cell *matHeaderCellDef mat-sort-header>
+						Group
+					</mat-header-cell>
+					<mat-cell *matCellDef="let row" [style.color]="row.group">
+						{{ row.group | shortener: 10 }}
+					</mat-cell>
+				</ng-container>
 
-        <ng-container matColumnDef="description">
-          <mat-header-cell *matHeaderCellDef mat-sort-header> Description</mat-header-cell>
-          <mat-cell *matCellDef="let row" [style.color]="row.description"> {{row.description | date:'longDate' }} </mat-cell>
-        </ng-container>
+				<ng-container matColumnDef="description">
+					<mat-header-cell *matHeaderCellDef mat-sort-header>
+						Description</mat-header-cell
+					>
+					<mat-cell
+						*matCellDef="let row"
+						[style.color]="row.description">
+						{{ row.description | date: 'longDate' }}
+					</mat-cell>
+				</ng-container>
 
-        <ng-container matColumnDef="actions">
-          <mat-header-cell *matHeaderCellDef>
-            <button mat-icon-button color="primary" (click)="onCreate()">
-              <mat-icon aria-label="Example icon-button with a heart icon">add</mat-icon>
-            </button>
-          </mat-header-cell>
+				<ng-container matColumnDef="actions">
+					<mat-header-cell *matHeaderCellDef>
+						<button
+							mat-icon-button
+							color="primary"
+							(click)="onCreate()">
+							<mat-icon
+								aria-label="Example icon-button with a heart icon"
+								>add</mat-icon
+							>
+						</button>
+					</mat-header-cell>
 
-          <mat-cell *matCellDef="let row; let i=index;">
-            <button class="button-edit" (click)="onViewDetails(row._id)">
-              View
-            </button>
-            &nbsp;
-            <button class="button-delete" (click)="onDelete(row._id)">
-              Delete
-            </button>
-          </mat-cell>
-        </ng-container>
+					<mat-cell *matCellDef="let row; let i = index">
+						<button
+							class="button-edit"
+							(click)="onViewDetails(row._id)">
+							View
+						</button>
+						&nbsp;
+						<button
+							class="button-delete"
+							(click)="onDelete(row._id)">
+							Delete
+						</button>
+					</mat-cell>
+				</ng-container>
 
-        <mat-header-row *matHeaderRowDef="displayedColumns"></mat-header-row>
-        <mat-row *matRowDef="let row; columns: displayedColumns;">
-        </mat-row>
-      </mat-table>
+				<mat-header-row
+					*matHeaderRowDef="displayedColumns"></mat-header-row>
+				<mat-row *matRowDef="let row; columns: displayedColumns">
+				</mat-row>
+			</mat-table>
 
-      <mat-paginator [pageSizeOptions]="[5, 10, 25, 100]"></mat-paginator>
-    </div>
-  </mat-card>
+			<mat-paginator [pageSizeOptions]="[5, 10, 25, 100]"></mat-paginator>
+		</div>
+	</mat-card>
 </div>
 
 <!-- Mobile Version -->
 <div *ngFor="let data of employee; trackBy: trackById">
-  <div
-    class="mobile-container">
-    <div class="button-wrapper">
-      <h5 class="text-xl font-bold leading-none text-white">Latest Employee</h5>
-      <button class="button-view" (click)="onViewDetails(data._id)">
-        View
-      </button>
-      &nbsp;
-      <button class="button-remove" (click)="onDelete(data._id!)">
-        Delete
-      </button>
-    </div>
-    <div class="flow-root">
-      <ul role="list" class="divider">
-        <li class="py-3 sm:py-4">
-          <div class="flex-centered">
-            <div class="flex-1 min-w-0">
-              <p class="title">
-                Username
-              </p>
-              <p class="value">
-                {{data.username}}
-              </p>
-            </div>
-          </div>
-        </li>
-        <li class="py-3 sm:py-4">
-          <div class="flex-centered">
-            <div class="flex-1 min-w-0">
-              <p class="title">
-                Email
-              </p>
-              <p class="value">
-                {{data.email}}
-              </p>
-            </div>
-          </div>
-        </li>
-        <li class="py-3 sm:py-4">
-          <div class="flex-centered">
-            <div class="flex-1 min-w-0">
-              <p class="title">
-                Group
-              </p>
-              <p class="value">
-                {{data.group}}
-              </p>
-            </div>
-          </div>
-        </li>
-        <li class="py-3 sm:py-4">
-          <div class="flex-centered">
-            <div class="flex-1 min-w-0">
-              <p class="title">
-                Status
-              </p>
-              <p class="value">
-                {{data.status}}
-              </p>
-            </div>
-          </div>
-        </li>
-        <li class="pt-3 pb-0 sm:pt-4">
-          <div class="flex-centered">
-            <div class="flex-1 min-w-0">
-              <p class="title">
-                Salary
-              </p>
-              <p class="value">
-                {{data.salary | rupiahCurrency }}
-              </p>
-            </div>
-          </div>
-        </li>
-      </ul>
-    </div>
-  </div>
+	<div class="mobile-container">
+		<div class="button-wrapper">
+			<h5 class="text-xl font-bold leading-none text-white">
+				Latest Employee
+			</h5>
+			<button class="button-view" (click)="onViewDetails(data._id)">
+				View
+			</button>
+			&nbsp;
+			<button class="button-remove" (click)="onDelete(data._id!)">
+				Delete
+			</button>
+		</div>
+		<div class="flow-root">
+			<ul role="list" class="divider">
+				<li class="py-3 sm:py-4">
+					<div class="flex-centered">
+						<div class="flex-1 min-w-0">
+							<p class="title">Username</p>
+							<p class="value">
+								{{ data.username }}
+							</p>
+						</div>
+					</div>
+				</li>
+				<li class="py-3 sm:py-4">
+					<div class="flex-centered">
+						<div class="flex-1 min-w-0">
+							<p class="title">Email</p>
+							<p class="value">
+								{{ data.email }}
+							</p>
+						</div>
+					</div>
+				</li>
+				<li class="py-3 sm:py-4">
+					<div class="flex-centered">
+						<div class="flex-1 min-w-0">
+							<p class="title">Group</p>
+							<p class="value">
+								{{ data.group }}
+							</p>
+						</div>
+					</div>
+				</li>
+				<li class="py-3 sm:py-4">
+					<div class="flex-centered">
+						<div class="flex-1 min-w-0">
+							<p class="title">Status</p>
+							<p class="value">
+								{{ data.status }}
+							</p>
+						</div>
+					</div>
+				</li>
+				<li class="pt-3 pb-0 sm:pt-4">
+					<div class="flex-centered">
+						<div class="flex-1 min-w-0">
+							<p class="title">Salary</p>
+							<p class="value">
+								{{ data.salary | rupiahCurrency }}
+							</p>
+						</div>
+					</div>
+				</li>
+			</ul>
+		</div>
+	</div>
 </div>

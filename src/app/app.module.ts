@@ -13,20 +13,24 @@ import { APP_BASE_HREF, CommonModule } from '@angular/common';
 import { CookieService } from 'ngx-cookie-service';
 
 @NgModule({
-    declarations: [AppComponent],
-    imports: [
-        CommonModule,
-        BrowserModule,
-        AppRoutingModule,
-        BrowserAnimationsModule,
-        ComponentsModule,
-        FormsModule,
-        ReactiveFormsModule,
-        HttpClientModule,
-        MaterialModule,
-    ],
-    providers: [...Providers, { provide: APP_BASE_HREF, useValue: '/' }, CookieService] ,
-    bootstrap: [AppComponent],
-    exports: [],
+	declarations: [AppComponent],
+	imports: [
+		CommonModule,
+		BrowserModule,
+		AppRoutingModule,
+		BrowserAnimationsModule,
+		ComponentsModule,
+		FormsModule,
+		ReactiveFormsModule,
+		HttpClientModule,
+		MaterialModule,
+	],
+	providers: [
+		...Providers,
+		{ provide: APP_BASE_HREF, useValue: '/' },
+		CookieService,
+	],
+	bootstrap: [AppComponent],
+	exports: [],
 })
 export class AppModule {}

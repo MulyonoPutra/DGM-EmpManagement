@@ -1,22 +1,25 @@
 # EmployeeManagement
 
-This project explain about Employee Management with several features: 
-  - Authentication includes User Login, Register and Logout
-  - View list of employee with pagination, sorting and search
-  - Create new employee
-  - Remove employee
-  - View Details Employee
+This project explain about Employee Management with several features:
 
- Build using Angular version 14.0.1 with Styling using Tailwind CSS, Angular Material.
+-   Authentication includes User Login, Register and Logout
+-   View list of employee with pagination, sorting and search
+-   Create new employee
+-   Remove employee
+-   View Details Employee
+
+Build using Angular version 14.0.1 with Styling using Tailwind CSS, Angular Material.
 
 ## Running
-How to run this project locally? 
- - clone from Github
- - open new terminal: 
-    - `cd employee-management`
-    - `npm install`
-    - `npm start` or `ng serve`
-    The application will automatically reload if you change any of the source files.
+
+How to run this project locally?
+
+-   clone from Github
+-   open new terminal:
+    -   `cd employee-management`
+    -   `npm install`
+    -   `npm start` or `ng serve`
+        The application will automatically reload if you change any of the source files.
 
 ## Build
 

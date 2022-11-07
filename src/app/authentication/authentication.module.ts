@@ -9,16 +9,16 @@ import { ComponentsModule } from '../../@components/components.module';
 import { RegisterComponent } from './register/register.component';
 
 @NgModule({
-    declarations: [LoginComponent, RegisterComponent],
-    imports: [
-        CommonModule,
-        AuthenticationRoutingModule,
-        MaterialModule,
-        ReactiveFormsModule,
-        FormsModule,
-        ComponentsModule,
-    ],
-    exports: [LoginComponent, RegisterComponent],
-    schemas: [CUSTOM_ELEMENTS_SCHEMA],
+	declarations: [LoginComponent, RegisterComponent],
+	imports: [
+		CommonModule,
+		AuthenticationRoutingModule,
+		MaterialModule,
+		ReactiveFormsModule,
+		FormsModule,
+		ComponentsModule,
+	],
+	exports: [LoginComponent, RegisterComponent],
+	schemas: [CUSTOM_ELEMENTS_SCHEMA],
 })
 export class AuthenticationModule {}

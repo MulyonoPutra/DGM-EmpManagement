@@ -1,49 +1,48 @@
 .container {
-  @apply m-7;
-  margin-top: 100px;
-  width: 95%;
+	@apply m-7;
+	margin-top: 100px;
+	width: 95%;
 
-  ::ng-deep {
-    .mat-form-field {
-      width: fit-content;
-      @apply w-full lg:w-full md:w-full;
-    }
+	::ng-deep {
+		.mat-form-field {
+			width: fit-content;
+			@apply w-full lg:w-full md:w-full;
+		}
 
-    .mat-card {
-      width: fit-content;
-      @apply block lg:w-full md:w-full bg-white rounded-lg mr-3 md:mr-0 lg:mr-0;
+		.mat-card {
+			width: fit-content;
+			@apply block lg:w-full md:w-full bg-white rounded-lg mr-3 md:mr-0 lg:mr-0;
 
-      @media (max-width: 767px) {
-        @apply absolute;
-        top: 80px;
-        left: 15%;
-      }
-    }
+			@media (max-width: 767px) {
+				@apply absolute;
+				top: 80px;
+				left: 15%;
+			}
+		}
 
-    .mat-card-content {
-      width: fit-content;
-      @apply block lg:w-full md:w-full bg-white rounded-lg mr-3 md:mr-0 lg:mr-0
-    }
+		.mat-card-content {
+			width: fit-content;
+			@apply block lg:w-full md:w-full bg-white rounded-lg mr-3 md:mr-0 lg:mr-0;
+		}
 
-    .mat-error {
-      margin-top: -1rem;
-    }
-  }
+		.mat-error {
+			margin-top: -1rem;
+		}
+	}
 }
 
 .button {
-  &-save {
-    @apply bg-[#0C2D48] text-white font-semibold py-2 px-4 border border-gray-400 rounded shadow mr-3;
-  }
+	&-save {
+		@apply bg-[#0C2D48] text-white font-semibold py-2 px-4 border border-gray-400 rounded shadow mr-3;
+	}
 
-  &-cancel {
-    @apply bg-white text-[#0C2D48] font-semibold py-2 px-4 border border-gray-400 rounded shadow;
-  }
+	&-cancel {
+		@apply bg-white text-[#0C2D48] font-semibold py-2 px-4 border border-gray-400 rounded shadow;
+	}
 }
 
 button:disabled,
 button[disabled] {
-  cursor: not-allowed;
-  @apply py-2 px-4 text-white bg-[#B1D4E0] rounded focus:outline-none;
+	cursor: not-allowed;
+	@apply py-2 px-4 text-white bg-[#B1D4E0] rounded focus:outline-none;
 }
-
