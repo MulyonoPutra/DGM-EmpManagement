@@ -1,0 +1,63 @@
+<div>
+  <div class="flex flex-wrap">
+    <div class="login-left fixed">
+      <side-background heading="Sign Up" desc="Create your account to try our features">
+      </side-background>
+    </div>
+    <div class="login-right absolute right-0 bg-[#0C2D48]">
+      <div class="login-right-container">
+        <div class="mb-5 md:mb-6 lg:mb-6 md:pb-1 lg:pb-1">
+          <span class="login-right-heading block">
+            Sign Up
+          </span>
+        </div>
+        <form class="login-container md:pt-10 lg:pt-10 pt-9" autocomplete="off" [formGroup]="registerForms">
+          <div>
+            <div>
+              <mat-form-field class="w-full" appearance="outline">
+                <mat-label>Name</mat-label>
+                <input matInput placeholder="Username" autocomplete="name" [formControlName]="'name'">
+              </mat-form-field>
+            </div>
+            <div>
+              <mat-form-field class="w-full" appearance="outline">
+                <mat-label>Email</mat-label>
+                <input matInput placeholder="Email" autocomplete="email" [formControlName]="'email'">
+              </mat-form-field>
+            </div>
+            <div>
+              <mat-form-field class="w-full" appearance="outline">
+                <mat-label>Enter your password</mat-label>
+                <input matInput [type]="hide ? 'password' : 'text'" [formControlName]="'password'">
+                <button mat-icon-button matSuffix (click)="hide = !hide" [attr.aria-label]="'Hide password'"
+                  [attr.aria-pressed]="hide">
+                  <mat-icon>{{hide ? 'visibility_off' : 'visibility'}}</mat-icon>
+                </button>
+              </mat-form-field>
+            </div>
+            <div class="mb-6">
+              <div class="flex">
+                <div class="w-1/2 text-left">
+                </div>
+              </div>
+            </div>
+            <div class="text-center">
+              <button class="login-btn" (click)="register()" [disabled]="!registerForms.valid">Sign Up</button>
+            </div>
+            <div class="mb-6 mt-6">
+              <div class="flex items-center">
+                <div class="line-divider"></div>
+                <span class="text-divider">
+                  Already have account? Please <i class="underline text-[#145DA0] cursor-pointer"
+                    (click)="loginPage()">Sign In</i>
+                </span>
+                <div class="line-divider"></div>
+              </div>
+            </div>
+          </div>
+        </form>
+
+      </div>
+    </div>
+  </div>
+</div>

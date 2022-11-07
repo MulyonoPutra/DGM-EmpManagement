@@ -1,0 +1,29 @@
+.container {
+  @apply m-7 top-9 ;
+  width: 95%;
+
+  .title {
+    @apply px-4 py-2 font-semibold;
+  }
+
+  .value {
+    @apply px-4 py-2;
+  }
+
+  .button {
+    &-back {
+      @apply bg-[#0C2D48] text-white font-medium py-2 px-4 border border-gray-400 rounded shadow mr-3 mt-4 w-[90px];
+    }
+  }
+}
+
+::ng-deep {
+  .mat-card {
+    @apply mt-24;
+    @media (max-width: 767px) {
+      width: 80%;
+      margin-left: 20px;
+      margin-right: 20px;
+    }
+  }
+}

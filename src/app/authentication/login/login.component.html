@@ -1,0 +1,68 @@
+<div>
+  <div class="flex flex-wrap">
+    <div class="login-left fixed">
+      <side-background heading="Digimaster Employee Management" desc="Please enter your registered
+        mobile number/email and password.">
+      </side-background>
+    </div>
+    <div class="login-right absolute right-0 bg-[#0C2D48]">
+      <div class="login-right-container">
+        <div class="mb-5 md:mb-6 lg:mb-6 md:pb-1 lg:pb-1">
+          <span class="login-right-heading block">
+            Sign In
+          </span>
+        </div>
+        <form class="login-container md:pt-10 lg:pt-10 pt-9" autocomplete="off"
+          [formGroup]="loginForms">
+          <div>
+            <div>
+              <mat-form-field class="w-full" appearance="outline">
+                <mat-label>Email</mat-label>
+                <input matInput placeholder="Email" autocomplete="email"
+                  [formControlName]="'email'">
+              </mat-form-field>
+            </div>
+            <div>
+              <mat-form-field class="w-full" appearance="outline">
+                <mat-label>Enter your password</mat-label>
+                <input matInput [type]="hide ? 'password' : 'text'"
+                  [formControlName]="'password'">
+                <button mat-icon-button matSuffix (click)="hide= !hide"
+                  [attr.aria-label]="'Hide password'"
+                  [attr.aria-pressed]="hide">
+                  <mat-icon>{{hide ? 'visibility_off' : 'visibility'}}</mat-icon>
+                </button>
+              </mat-form-field>
+            </div>
+            <div class="mb-6">
+              <div class="flex">
+                <div class="w-1/2 text-left">
+                </div>
+                <div class="login-link w-1/2 text-right">
+                  <a routerLink="/forgot-password">
+                    Forgot Password?
+                  </a>
+                </div>
+              </div>
+            </div>
+            <div class="text-center">
+              <button class="login-btn" (click)="login()"
+                [disabled]="!loginForms.valid">Sign In</button>
+            </div>
+            <div class="mb-6 mt-6">
+              <div class="flex items-center">
+                <div class="line-divider"></div>
+                <span class="text-divider">
+                  Don't have account? Please <i class="underline text-[#145DA0]
+                    cursor-pointer"
+                    (click)="registerPage()">Register</i>
+                </span>
+                <div class="line-divider"></div>
+              </div>
+            </div>
+          </div>
+        </form>
+      </div>
+    </div>
+  </div>
+</div>

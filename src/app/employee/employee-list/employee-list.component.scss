@@ -1,0 +1,89 @@
+.example-container {
+  display: flex;
+  flex-direction: column;
+  min-width: 300px;
+}
+
+.example-header {
+  min-height: 64px;
+  padding: 8px 24px 0;
+}
+
+::ng-deep {
+  .mat-column-email {
+    flex: none;
+    width: 200px;
+  }
+
+  .mat-column-id {
+    flex: none;
+    width: 260px;
+  }
+
+  .mat-form-field {
+    font-size: 14px;
+    width: 100%;
+  }
+
+  .mat-table {
+    overflow: auto;
+    max-height: 500px;
+  }
+
+  .mat-paginator-page-size-select {
+    width: 65px !important;
+  }
+
+  .mat-elevation-z8 {
+    box-shadow: none;
+  }
+
+  .mat-icon {
+    @apply text-[#0C2D48]
+  }
+}
+
+.button {
+  &-edit {
+    @apply bg-white text-[#0C2D48] font-semibold py-2 px-4 border border-gray-400 rounded shadow;
+  }
+
+  &-delete {
+    @apply bg-[#0C2D48] text-white font-semibold py-2 px-4 border border-gray-400 rounded shadow;
+  }
+}
+
+.mobile-container {
+  @apply m-8 p-8 w-full max-w-md bg-white rounded-lg border shadow-md sm:p-8 sm:hidden;
+  width: 80%;
+  margin-top: 80px;
+
+  .button {
+    &-wrapper {
+      @apply flex justify-between items-center mb-4;
+    }
+    &-view {
+      @apply text-sm font-medium text-[#0C2D48] hover:underline;
+    }
+
+    &-remove {
+      @apply text-sm font-medium text-[#41729F] hover:underline;
+    }
+  }
+
+  .divider {
+    @apply divide-y divide-gray-200 dark:divide-gray-700;
+  }
+
+  .flex-centered {
+    @apply flex items-center space-x-4;
+  }
+
+  .title {
+    @apply text-sm font-bold text-gray-900 truncate;
+  }
+
+  .value {
+    @apply text-sm text-gray-500 truncate dark:text-gray-700;
+  }
+}
